@@ -1,41 +1,64 @@
 import React, { useEffect, useState } from "react";
+import "./drivers.css";
 
 function Drivers() {
   const [backendData, setBackendData] = useState([]);
+
   useEffect(() => {
     fetch("/api/drivers")
       .then((response) => response.json())
       .then((data) => {
-        showData(data);
         setBackendData(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
+ 
+  useEffect(() => {
+    showData(backendData);
+  }, [backendData]);
+
+  const handleCompareClick = (driverId) => {
+    console.log(`Comparando conductor con ID: ${driverId}`);
+  };
+
   const showData = (data) => {
     console.log("Data from server:", data);
     let body = '';
     if (data.length === 0) {
       body = `<tr><td colSpan="11">No data available</td></tr>`;
     } else {
+      // Encontrar el valor máximo en cada columna
+      const maxValues = {};
+      const columns = ["passageThroughCurves", "Braking", "Reaction", "Control", "Touch", "Adaptability", "Overtaking", "Defending", "accuracy", "total"];
+    
+      columns.forEach(column => {
+        const max = Math.max(...data.map(driver => driver[column]));
+        maxValues[column] = max;
+      });
+
       for (let i = 0; i < data.length; i++) {
-        body += `<tr>
-        <td>${data[i].Name}</td>
-        <td>${data[i].passageThroughCurves}</td>
-        <td>${data[i].Braking}</td>
-        <td>${data[i].Reaction}</td>
-        <td>${data[i].Control}</td>
-        <td>${data[i].Touch}</td>
-        <td>${data[i].Adaptability}</td>
-        <td>${data[i].Overtaking}</td>
-        <td>${data[i].Defending}</td>
-        <td>${data[i].accuracy}</td>
-        <td>${data[i].total}</td>
-      </tr>` ;
+        body += `<tr key=${i}>
+          <td>
+            <button className="btn-link">
+              <img src="${data[i].photoUrl}" alt="${data[i].Name}" />
+            </button>
+          </td>
+          ${columns.map(column => {
+            const cellValue = data[i][column];
+            const isMax = cellValue === maxValues[column];
+            return `<td ${isMax ? 'class="max-value"' : ''}>${cellValue}</td>`;
+          }).join('')}
+         
+        </tr>`;
       }
     }
-    document.querySelector('tbody').innerHTML = body;
+
+    const tbody = document.querySelector('#tbody');
+    if (tbody) {
+      tbody.innerHTML = body;
+    }
   };
 
   return (
@@ -43,24 +66,26 @@ function Drivers() {
       {backendData.length === 0 ? (
         <p>Loading</p>
       ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Driver</th>
-              <th>PPC</th>
-              <th>FRE</th>
-              <th>REA</th>
-              <th>CTR</th>
-              <th>TAC</th>
-              <th>ADP</th>
-              <th>ADE</th>
-              <th>DEF</th>
-              <th>PRE</th>
-              <th>GEN</th>
-            </tr>
-          </thead>
-          <tbody id="tbody"></tbody>
-        </table>
+        <div className="container mt-4 shado-lg p3 mb-5 bg-body rounded"> 
+          <table className="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Driver</th>
+                <th>PPC</th>
+                <th>FRE</th>
+                <th>REA</th>
+                <th>CTR</th>
+                <th>TAC</th>
+                <th>ADP</th>
+                <th>ADE</th>
+                <th>DEF</th>
+                <th>PRE</th>
+                <th>GEN</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table> 
+        </div>
       )}
     </div>
   );
