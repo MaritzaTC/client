@@ -19,9 +19,6 @@ function Drivers() {
     showData(backendData);
   }, [backendData]);
 
-  const handleCompareClick = (driverId) => {
-    console.log(`Comparando conductor con ID: ${driverId}`);
-  };
 
   const showData = (data) => {
     console.log("Data from server:", data);
@@ -67,6 +64,8 @@ function Drivers() {
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shado-lg p3 mb-5 bg-body rounded"> 
+        <h2><center>Skill Drivers</center></h2>
+        <h1><center>2023</center></h1>
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
