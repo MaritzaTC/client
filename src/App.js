@@ -3,6 +3,7 @@ import Drivers from "./pages/drivers";
 import Correlation from "./pages/correlation";
 import CorrelationPointsAndPodios from "./pages/pointAndPodios";
 import DriversStandigs from "./pages/driverstandings";
+import ConstructorStandings from "./pages/constructorstandings";
 function App() {
   return (
     <div className="App">
@@ -10,12 +11,14 @@ function App() {
 
       <Router>
         <ul> 
-          <li><Link to="/driverstandigs">driverstandings</Link> </li>
+          <li><Link to="/driverstandigs">Driver Standings</Link> </li>
+          <li><Link to='/constructorstandings'k>Constructor Standings</Link></li>
           <li><Link to="/">Correlation: Age and Wins</Link></li>
           <li><Link to="/drivers">Skill Drivers</Link></li>
-          <li><Link to="/driverCorrelation">Correlation: Points</Link></li>
+          <li><Link to="/driverCorrelation">Correlation: Points and Podiums</Link></li>
         </ul>
         <Routes>
+          <Route path="/constructorstandings" element={<ConstructorStandings />} />
           <Route path="/driverstandigs" element={<DriversStandigs />} />
           <Route path="/driverCorrelation" element={<CorrelationPointsAndPodios />} />
           <Route path="/drivers" element={<Drivers />} />

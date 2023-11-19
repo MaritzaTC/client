@@ -2,18 +2,29 @@ import React, { useEffect, useState } from "react";
 
 function DriversStandings() {
   const [driverWithHighestWinRate, setDriverWithHighestWinRate] = useState({});
-  const [driverStats, setDriverStats] = useState({});
+  const [driverStats, setDriverStats] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 40;
+
   useEffect(() => {
     fetch("/api/driverstandings")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setDriverWithHighestWinRate(data.driverWithHighestWinRate);
         setDriverStats(data.driverStats);
+        console.log(data.driverStats);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentDriverStats = driverStats.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div>
@@ -25,11 +36,11 @@ function DriversStandings() {
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
-                <th>driverName</th>
-                <th>driverId</th>
-                <th>totalWins</th>
-                <th>totalRaces</th>
-                <th>winRate</th>
+               <th>Driver</th>
+                <th>Driver Id</th>
+                <th>Total Wins</th>
+                <th>Total Races</th>
+                <th>WinRate</th>
               </tr>
             </thead>
             <tbody>
@@ -52,23 +63,37 @@ function DriversStandings() {
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
-                <th>driverName</th>
-                <th>driverId</th>
-                <th>totalWins</th>
-                <th>totalRaces</th>
-                <th>winRate</th>
+                <th>Driver</th>
+                <th>Driver Id</th>
+                <th>Total Wins</th>
+                <th>Total Races</th>
+                <th>WinRate</th>
               </tr>
             </thead>
             <tbody>
-             <tr key={driverStats.driverId}>
-              <td>{driverStats.driverId}</td>
-              <td>{driverStats.driverName}</td>
-              <td>{driverStats.totalWins}</td>
-              <td>{driverStats.totalRaces}</td>
-              <td>{driverStats.winRate}</td>
-             </tr>
+              {currentDriverStats.map((driver) => (
+                <tr key={driver.driverId}>
+                  <td>{driver.driverName}</td>
+                  <td>{driver.driverId}</td>
+                  <td>{driver.totalWins}</td>
+                  <td>{driver.totalRaces}</td>
+                  <td>{driver.winRate}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
+          <div>
+            <ul className="pagination">
+              {Array.from({ length: Math.ceil(driverStats.length / itemsPerPage) }, (_, i) => (
+                <li key={i} className={`page-item ${currentPage === i + 1 ? "active" : ""}`}>
+                  <button onClick={() => paginate(i + 1)} className="page-link" style={{color: 'white',
+                      backgroundColor: currentPage === i + 1 ? '#EA0303' : 'black',}}>
+                    {i + 1}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>
