@@ -8,6 +8,7 @@ import DriverImc from "./pages/driversIMC";
 import DriverComparison from "./pages/comparison";
 import Rankings from "./pages/ranking"
 import logo from './Imagenes/logo.png';
+import CarsPhoto from './Imagenes/cars.jpg'
 function App() {
   return (
     <div className="App">
@@ -44,6 +45,13 @@ function App() {
       </div>
       </div>
       </nav>
+      <div><center> <img src={CarsPhoto} alt="logo" width="895" height="" /></center></div>
+      <footer style={{ backgroundColor: '#212529', color: 'white' }}>
+  <center>
+    <p>&copy; 2023 Universidad de Antioquia | Desarrollado por: Ana María Vega Angarita y Maritza Tabarez Cárdenas | Estructura de Datos 2023-2 </p>
+  </center>
+</footer>
+
     </div>
   );
 }
