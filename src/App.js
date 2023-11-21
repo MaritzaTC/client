@@ -23,10 +23,10 @@ function App() {
       <Router>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
         <li><Link to={"/rankingfirst"} style={{ color: "white", textDecoration: "none" }}> Rankings</Link></li>
-          <li ><Link style={{ color: "white", textDecoration: "none" }} to='/driverscomparison'>Comparison</Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverstandigs">Driver Standings</Link> </li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to='/constructorstandings'k>Constructor Standings</Link></li>
-          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/drivers">Drivers Skill </Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/drivers">Drivers Skills </Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to='/driverscomparison'>Comparison</Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driversimc">Drivers BMI</Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverCorrelation">Correlation: Points and Podiums</Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverageandwins">Correlation: Age and Wins</Link></li>

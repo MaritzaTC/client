@@ -28,7 +28,7 @@ function DriversImc() {
                 <th>Name</th>
                 <th>Height</th>
                 <th>Weight</th>
-                <th>IMC</th>
+                <th>BMI</th>
               </tr>
             </thead>
             <tbody>

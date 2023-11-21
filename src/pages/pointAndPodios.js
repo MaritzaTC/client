@@ -23,7 +23,7 @@ function Pointandpodios() {
         <p  >Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h2>Correlation Poinst And Podiums</h2>
+          <h2>Correlation Points And Podiums</h2>
           {correlation !== null && (
             <p><strong>Correlation: </strong>{correlation}</p>
           )}
