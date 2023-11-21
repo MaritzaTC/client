@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./drivers.css";
+import DriversPhoto from '../Imagenes/drivers.jpg'
 
 function Drivers() {
   const [backendData, setBackendData] = useState([]);
@@ -60,7 +61,7 @@ function Drivers() {
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shado-lg p3 mb-5 bg-body rounded"> 
-        <h2><center>Skill Drivers</center></h2>
+        <h2><center>Drivers Skills</center></h2>
         <h1><center>2023</center></h1>
           <table className="table table-bordered table-striped">
             <thead>
@@ -80,6 +81,7 @@ function Drivers() {
             </thead>
             <tbody id="tbody"></tbody>
           </table> 
+          <div><center> <img src={DriversPhoto} alt="logo" width="895" height="" /></center></div>
         </div>
       )}
     </div>

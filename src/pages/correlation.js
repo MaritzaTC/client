@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import CorrelationPhoto from '../Imagenes/CorrelationAgeAndWins.jpg'
 function Correlation() {
   const [backendData, setBackendData] = useState([]);
   const [correlationForAll, setCorrelationForAll] = useState(null);
@@ -40,6 +40,7 @@ function Correlation() {
               {correlationForAll}
             </p>
           )}
+          <div><center> <img src={CorrelationPhoto} alt="logo" width="895" height="" /></center></div>
           {correlationForPage !== null && (
             <p><strong>Correlation First Page: </strong>{correlationForPage}</p>
           )}
@@ -75,6 +76,7 @@ function Correlation() {
           </div>
         </div>
       )}
+     
     </div>
   );
 }

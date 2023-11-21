@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import CorrelationPhoto from '../Imagenes/CorrelationPoinstAndPodiums.jpg'
 function Pointandpodios() {
   const [backendData, setBackendData] = useState([]);
   const [correlation, setCorrelation] = useState(null);
@@ -27,6 +27,7 @@ function Pointandpodios() {
           {correlation !== null && (
             <p><strong>Correlation: </strong>{correlation}</p>
           )}
+          <div><center> <img src={CorrelationPhoto} alt="logo" width="895" height="" /></center></div>
           <table className="table table-bordered table-striped">
             <thead>
               <tr>

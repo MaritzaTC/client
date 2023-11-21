@@ -21,14 +21,14 @@ function App() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <Router>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
-        <li> <Link to={"/rankingfirst"} style={{color: "EA0303"}}>Rankings</Link></li>
-          <li className="nav-item" style={{color: "EA0303"}}><Link className="nav-link" to='/driverscomparison'>Comparison</Link></li>
-          <li className="nav-item"><Link className="nav-link"to="/driverstandigs">Driver Standings</Link> </li>
-          <li className="nav-item"><Link className="nav-link"to='/constructorstandings'k>Constructor Standings</Link></li>
-          <li className="nav-item"><Link className="nav-link"to="/drivers">Skill Drivers</Link></li>
-          <li className="nav-item"><Link className="nav-link"to="/driversimc">Imc drivers</Link></li>
-          <li className="nav-item"><Link className="nav-link"to="/driverCorrelation">Correlation: Points and Podiums</Link></li>
-          <li className="nav-item"><Link className="nav-link"to="/driverageandwins">Correlation: Age and Wins</Link></li>
+        <li><Link to={"/rankingfirst"} style={{ color: "white", textDecoration: "none" }}> Rankings</Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to='/driverscomparison'>Comparison</Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverstandigs">Driver Standings</Link> </li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to='/constructorstandings'k>Constructor Standings</Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/drivers">Drivers Skill </Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driversimc">Drivers BMI</Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverCorrelation">Correlation: Points and Podiums</Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverageandwins">Correlation: Age and Wins</Link></li>
         </ul>
         <Routes>
           <Route path="/rankingfirst" element={<Rankings/>}></Route>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import LewisPhoto from '../Imagenes/lewis-hamilton-mercedes-1.jpg'
 function DriversStandings() {
   const [driverWithHighestWinRate, setDriverWithHighestWinRate] = useState({});
   const [driverStats, setDriverStats] = useState([]);
@@ -53,6 +53,7 @@ function DriversStandings() {
               </tr>
             </tbody>
           </table>
+          <div><center> <img src={LewisPhoto} alt="logo" width="895" height="" /></center></div>
         </div>
       )}
       {Object.keys(driverStats).length === 0 ? (

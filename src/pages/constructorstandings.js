@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import BrawnPhoto from '../Imagenes/brawn.jpg'
 function ConstructorStandings() {
   const [constructorWithHighestWinRate, setConstructorWithHighestWinRate] = useState({});
   const [constructorStats, setconstructorStats] = useState([]);
@@ -32,7 +32,7 @@ function ConstructorStandings() {
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h2>Driver with highest win rate</h2>
+          <h2>Constructor with highest win rate</h2>
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -53,13 +53,14 @@ function ConstructorStandings() {
               </tr>
             </tbody>
           </table>
+          <div><center> <img src={BrawnPhoto} alt="logo" width="895" height="" /></center></div>
         </div>
       )}
       {Object.keys(constructorStats).length === 0 ? (
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h2>Driver Stats</h2>
+          <h2>Constructor Stats</h2>
           <table className="table table-bordered table-striped">
             <thead>
               <tr>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import CircuitsPhoto from '../Imagenes/Circuits.jpg'
 function fetchRankingData(apiEndpoint) {
   return fetch(apiEndpoint)
     .then((response) => response.json())
@@ -63,7 +63,7 @@ function Rankings() {
               ))}
             </tbody>
           </table>
-          
+          <div><center> <img src={CircuitsPhoto} alt="logo" width="895" height="" /></center></div>
         </div>
       )} 
         </div>

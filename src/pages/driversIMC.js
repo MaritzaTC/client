@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import BMIPhoto from '../Imagenes/BPIPhoto.jpg'
 function DriversImc() {
   const [backendData, setBackendData] = useState([]);
 
@@ -21,7 +21,7 @@ function DriversImc() {
         <p  >Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h2><center>IMC Drivers</center></h2>
+          <h2><center> Drivers BMI</center></h2>
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -42,7 +42,7 @@ function DriversImc() {
               ))}
             </tbody>
           </table>
-         
+          <div><center> <img src={BMIPhoto} alt="logo" width="895" height="" /></center></div>
         </div>
       )}
     </div>
