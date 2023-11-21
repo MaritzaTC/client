@@ -37,11 +37,7 @@ function Drivers() {
 
       for (let i = 0; i < data.length; i++) {
         body += `<tr key=${i}>
-          <td>
-            <button className="btn-link">
-              <img src="${data[i].photoUrl}" alt="${data[i].Name}" />
-            </button>
-          </td>
+          <td>${data[i].Name}</td>
           ${columns.map(column => {
             const cellValue = data[i][column];
             const isMax = cellValue === maxValues[column];
@@ -70,15 +66,15 @@ function Drivers() {
             <thead>
               <tr>
                 <th>Driver</th>
-                <th>PPC</th>
-                <th>FRE</th>
+                <th>PTC</th>
+                <th>BRA</th>
                 <th>REA</th>
                 <th>CTR</th>
-                <th>TAC</th>
+                <th>TOU</th>
                 <th>ADP</th>
-                <th>ADE</th>
+                <th>OVER</th>
                 <th>DEF</th>
-                <th>PRE</th>
+                <th>ACC</th>
                 <th>GEN</th>
               </tr>
             </thead>

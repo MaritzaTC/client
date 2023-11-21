@@ -6,6 +6,7 @@ import DriversStandigs from "./pages/driverstandings";
 import ConstructorStandings from "./pages/constructorstandings";
 import DriverImc from "./pages/driversIMC";
 import DriverComparison from "./pages/comparison";
+import Rankings from "./pages/ranking"
 import logo from './Imagenes/logo.png';
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <Router>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
+        <li> <Link to={"/rankingfirst"} style={{color: "EA0303"}}>Rankings</Link></li>
           <li className="nav-item" style={{color: "EA0303"}}><Link className="nav-link" to='/driverscomparison'>Comparison</Link></li>
           <li className="nav-item"><Link className="nav-link"to="/driverstandigs">Driver Standings</Link> </li>
           <li className="nav-item"><Link className="nav-link"to='/constructorstandings'k>Constructor Standings</Link></li>
@@ -29,6 +31,7 @@ function App() {
           <li className="nav-item"><Link className="nav-link"to="/driverageandwins">Correlation: Age and Wins</Link></li>
         </ul>
         <Routes>
+          <Route path="/rankingfirst" element={<Rankings/>}></Route>
           <Route path="/driverscomparison" element={<DriverComparison/>}></Route>
           <Route path="/driversimc" element={<DriverImc/>}></Route>
           <Route path="/constructorstandings" element={<ConstructorStandings />} />
