@@ -32,7 +32,7 @@ function DriversStandings() {
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h2>Driver with highest win rate</h2>
+          <h2><center>Driver with highest win rate</center></h2>
           <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
@@ -55,7 +55,17 @@ function DriversStandings() {
             </tbody>
           </table>
           </div>
-          <div><center> <img src={Alain} alt="logo" width="895" height="" /></center></div>
+          <div><center> <img src={Alain} alt="logo" width="95%" height="" /></center></div>
+          <div>
+          <iframe
+            width="100%"
+            height="415"
+            src="https://www.youtube.com/embed/3Q-KzoHumVI"
+            frameBorder="0"
+            allowFullScreen
+            title="Fatal Accident Video"
+          ></iframe>
+        </div>
         </div>
       )}
       {Object.keys(driverStats).length === 0 ? (

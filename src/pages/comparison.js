@@ -5,14 +5,13 @@ function Comparison() {
   const [selectedPersons, setSelectedPersons] = useState([]);
 
   useEffect(() => {
-    fetch("api/drivers")
+    fetch(`${process.env.REACT_APP_API_URL}/api/drivers`)
       .then((data) => data.json())
       .then((val) => setValues(val))
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
-
   const handleSelectChange = (e, index) => {
     const selectedValue = e.target.value;
     setSelectedPersons((prevSelectedPersons) => {

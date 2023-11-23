@@ -52,11 +52,10 @@ function App() {
       <div><center> <img src={CarsPhoto} alt="logo" width="65%" height="" /></center></div>
       <footer className="footer" >
   <center>
-    <p>&copy; 2023 Universidad de Antioquia | Desarrollado por: Ana María Vega Angarita y Maritza Tabarez Cárdenas | Estructura de Datos 2023-2 </p>
+    <p>&copy; 2023 University of Antioquia | Developed by: Ana María Vega Angarita and Maritza Tabarez Cárdenas | Data Structure 2023-2 </p>
   </center>
 </footer>
     </div>
   );
 }
-
 export default App;

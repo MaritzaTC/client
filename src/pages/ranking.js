@@ -23,14 +23,14 @@ function Rankings() {
   const [itemsPerPage] = useState(50);
 
   useEffect(() => {
-    fetchRankingData("/api/rankingfirst").then((data) => {
+    fetchRankingData(`${process.env.REACT_APP_API_URL}/api/rankingfirst`).then((data) => {
       setBackendData1(data);
     });
 
-    fetchRankingData("/api/rankings").then((data) => {
+    fetchRankingData(`${process.env.REACT_APP_API_URL}/api/rankings`).then((data) => {
       setBackendData2(data);
     });
-    fetchRankingData("/api/rankingsfaltalaccident").then((data) => {
+    fetchRankingData(`${process.env.REACT_APP_API_URL}/api/rankingsfaltalaccident`).then((data) => {
       setBackendData3(data);
     });
   }, []);

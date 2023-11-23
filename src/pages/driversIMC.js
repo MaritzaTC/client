@@ -4,7 +4,7 @@ function DriversImc() {
   const [backendData, setBackendData] = useState([]);
 
   useEffect(() => {
-    fetch("/api/driversimc")
+    fetch(`${process.env.REACT_APP_API_URL}/api/driversimc`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Data from server:", data);

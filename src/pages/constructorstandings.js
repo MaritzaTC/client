@@ -7,7 +7,7 @@ function ConstructorStandings() {
   const itemsPerPage = 40;
 
   useEffect(() => {
-    fetch("/api/constructorstandings")
+    fetch(`${process.env.REACT_APP_API_URL}/api/constructorstandings`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -32,7 +32,7 @@ function ConstructorStandings() {
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h2>Constructor with highest win rate</h2>
+          <h2><center>Constructor with highest win rate</center></h2>
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -54,6 +54,16 @@ function ConstructorStandings() {
             </tbody>
           </table>
           <div><center> <img src={BrawnPhoto} alt="logo" width="90%" height="" /></center></div>
+          <div>
+          <iframe
+            width="100%"
+            height="415"
+            src="https://www.youtube.com/embed/_PtFkqcMqLY"
+            frameBorder="0"
+            allowFullScreen
+            title="Fatal Accident Video"
+          ></iframe>
+        </div>
         </div>
       )}
       {Object.keys(constructorStats).length === 0 ? (

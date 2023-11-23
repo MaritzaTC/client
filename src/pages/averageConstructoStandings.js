@@ -5,8 +5,9 @@ function AverageConstructorStandings() {
   const [averagePoints, setAveragePoints] = useState([]);
 const [averagePosition, setAveragePosition] = useState([]);
 const[averageWins, setAverageWins] = useState([]);
+///api/constructoraverage
   useEffect(() => {
-    fetch("/api/constructoraverage")
+    fetch(`${process.env.REACT_APP_API_URL}/api/constructoraverage`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -27,12 +28,13 @@ const[averageWins, setAverageWins] = useState([]);
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
             <div>
-  <h2>Averages:</h2>
+            <h1 className="text"><span className="badge text-bg-danger-custom">Averages:</span></h1>
+
   {averagePoints && (
     <>
-      <p>Average Points: {averagePoints}</p>
-      <p>Average Position: {averagePosition}</p>
-      <p>Average Wins: {averageWins}</p>
+      <p> <strong> Average Points: </strong>{averagePoints}</p>
+      <p> <strong>Average Position:</strong> {averagePosition}</p>
+      <p> <strong>Average Wins:</strong> {averageWins}</p>
     </>
   )}
 </div>

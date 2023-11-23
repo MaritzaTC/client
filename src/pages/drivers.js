@@ -6,7 +6,7 @@ function Drivers() {
   const [backendData, setBackendData] = useState([]);
 
   useEffect(() => {
-    fetch("/api/drivers")
+    fetch(`${process.env.REACT_APP_API_URL}/api/drivers`)
       .then((response) => response.json())
       .then((data) => {
         setBackendData(data);

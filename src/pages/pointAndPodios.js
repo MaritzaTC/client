@@ -5,7 +5,7 @@ function Pointandpodios() {
   const [correlation, setCorrelation] = useState(null);
 
   useEffect(() => {
-    fetch("/api/drivers/pointandpodios")
+    fetch(`${process.env.REACT_APP_API_URL}/api/drivers/pointandpodios`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Data from server:", data);
@@ -23,7 +23,7 @@ function Pointandpodios() {
         <p  >Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h2>Correlation Points And Podiums</h2>
+          <h1 className="text"><span className="badge text-bg-danger-custom">Correlation Points And Podiums</span></h1>
           {correlation !== null && (
             <p><strong>Correlation: </strong>{correlation}</p>
           )}

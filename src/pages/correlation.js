@@ -8,7 +8,7 @@ function Correlation() {
   const itemsPerPage = 40;
 
   useEffect(() => {
-    fetch("/api/drivers/correlation/:id")
+    fetch(`${process.env.REACT_APP_API_URL}/api/drivers/correlation/:id`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Data from server:", data);
@@ -33,7 +33,7 @@ function Correlation() {
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <h1>Correlation: Age and wins </h1>
+          <h1 className="text"><span className="badge text-bg-danger-custom">Correlation: Age and wins</span></h1>
           {correlationForAll !== null && (
             <p>
               <strong>Correlation For All: </strong>
@@ -76,7 +76,7 @@ function Correlation() {
           </div>
         </div>
       )}
-     
+
     </div>
   );
 }
