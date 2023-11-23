@@ -44,6 +44,7 @@ function Correlation() {
           {correlationForPage !== null && (
             <p><strong>Correlation First Page: </strong>{correlationForPage}</p>
           )}
+          <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -60,6 +61,7 @@ function Correlation() {
               ))}
             </tbody>
           </table>
+          </div>
           <div>
             <ul className="pagination">
               {Array.from({ length: Math.ceil(backendData.length / itemsPerPage) }, (_, i) => (

@@ -63,7 +63,7 @@ function Drivers() {
         <div className="container mt-4 shado-lg p3 mb-5 bg-body rounded"> 
         <h2><center>Drivers Skills</center></h2>
         <h1><center>2023</center></h1>
-        <div className="table-responsive-lg">
+        <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>

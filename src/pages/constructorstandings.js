@@ -33,6 +33,7 @@ function ConstructorStandings() {
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <h2><center>Constructor with highest win rate</center></h2>
+          <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -53,6 +54,7 @@ function ConstructorStandings() {
               </tr>
             </tbody>
           </table>
+          </div>
           <div><center> <img src={BrawnPhoto} alt="logo" width="90%" height="" /></center></div>
           <div>
           <iframe

@@ -33,7 +33,7 @@ function DriversStandings() {
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <h2><center>Driver with highest win rate</center></h2>
-          <div className="table-responsive-lg">
+          <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
