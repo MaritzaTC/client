@@ -7,7 +7,7 @@ function DriversStandings() {
   const itemsPerPage = 40;
 
   useEffect(() => {
-    fetch("/api/driverstandings")
+    fetch(`${process.env.REACT_APP_API_URL}/api/driverstandings`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
