@@ -45,7 +45,7 @@ function Correlation() {
             <p><strong>Correlation First Page: </strong>{correlationForPage}</p>
           )}
           <div className="table-responsive-lg">
-          <table className="table table-bordered table-striped">
+          <table className="table table-bordered table-striped rounded">
             <thead>
               <tr>
                 <th>Age</th>
