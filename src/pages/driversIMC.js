@@ -22,6 +22,7 @@ function DriversImc() {
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <h2><center> Drivers BMI</center></h2>
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -42,7 +43,8 @@ function DriversImc() {
               ))}
             </tbody>
           </table>
-          <div><center> <img src={BMIPhoto} alt="logo" width="895" height="" /></center></div>
+          </div>
+          <div><center> <img src={BMIPhoto} alt="logo" width="90%" height="" /></center></div>
         </div>
       )}
     </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import LewisPhoto from '../Imagenes/lewis-hamilton-mercedes-1.jpg'
+import Alain from '../Imagenes/Alain Prost.jpg'
 function DriversStandings() {
   const [driverWithHighestWinRate, setDriverWithHighestWinRate] = useState({});
   const [driverStats, setDriverStats] = useState([]);
@@ -33,6 +33,7 @@ function DriversStandings() {
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <h2>Driver with highest win rate</h2>
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -53,7 +54,8 @@ function DriversStandings() {
               </tr>
             </tbody>
           </table>
-          <div><center> <img src={LewisPhoto} alt="logo" width="895" height="" /></center></div>
+          </div>
+          <div><center> <img src={Alain} alt="logo" width="895" height="" /></center></div>
         </div>
       )}
       {Object.keys(driverStats).length === 0 ? (

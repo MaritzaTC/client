@@ -8,3 +8,7 @@
   .max-value-color {
     color: #EA0303; 
   }
+
+  .text-bg-danger-custom {
+    background-color: #EA0303;
+  }

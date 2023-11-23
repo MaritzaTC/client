@@ -53,7 +53,7 @@ function ConstructorStandings() {
               </tr>
             </tbody>
           </table>
-          <div><center> <img src={BrawnPhoto} alt="logo" width="895" height="" /></center></div>
+          <div><center> <img src={BrawnPhoto} alt="logo" width="90%" height="" /></center></div>
         </div>
       )}
       {Object.keys(constructorStats).length === 0 ? (

@@ -27,7 +27,8 @@ function Pointandpodios() {
           {correlation !== null && (
             <p><strong>Correlation: </strong>{correlation}</p>
           )}
-          <div><center> <img src={CorrelationPhoto} alt="logo" width="895" height="" /></center></div>
+          <div><center> <img src={CorrelationPhoto} alt="logo" width="90%" height="" /></center></div>
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -44,7 +45,7 @@ function Pointandpodios() {
               ))}
             </tbody>
           </table>
-         
+          </div>
         </div>
       )}
     </div>

@@ -9,10 +9,12 @@ import DriverComparison from "./pages/comparison";
 import Rankings from "./pages/ranking"
 import logo from './Imagenes/logo.png';
 import CarsPhoto from './Imagenes/cars.jpg'
+import Average from './pages/averageConstructoStandings'
+import './App.css'
 function App() {
   return (
     <div className="App">
-      <nav class="navbar bg-dark border-bottom border-body" style={{backgroundColor: '#e3f2fd'}}>
+      <nav className="navbar bg-dark border-bottom border-body" style={{backgroundColor: '#e3f2fd'}}>
         <div className="container-fluid">
           <img src={logo} alt="logo" width="100" height="50" />
       <h1 className="navbar-brand" style={{color: "#e3f2fd"}}>Formula 1</h1>
@@ -25,6 +27,7 @@ function App() {
         <li><Link to={"/rankingfirst"} style={{ color: "white", textDecoration: "none" }}> Rankings</Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverstandigs">Driver Standings</Link> </li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to='/constructorstandings'k>Constructor Standings</Link></li>
+          <li ><Link style={{ color: "white", textDecoration: "none" }} to="/averageconstructorstandings">Average Constructor Standings</Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/drivers">Drivers Skills </Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to='/driverscomparison'>Comparison</Link></li>
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driversimc">Drivers BMI</Link></li>
@@ -32,6 +35,7 @@ function App() {
           <li ><Link style={{ color: "white", textDecoration: "none" }} to="/driverageandwins">Correlation: Age and Wins</Link></li>
         </ul>
         <Routes>
+          <Route path="/averageconstructorstandings" element={<Average/>}></Route>
           <Route path="/rankingfirst" element={<Rankings/>}></Route>
           <Route path="/driverscomparison" element={<DriverComparison/>}></Route>
           <Route path="/driversimc" element={<DriverImc/>}></Route>
@@ -45,13 +49,12 @@ function App() {
       </div>
       </div>
       </nav>
-      <div><center> <img src={CarsPhoto} alt="logo" width="895" height="" /></center></div>
-      <footer style={{ backgroundColor: '#212529', color: 'white' }}>
+      <div><center> <img src={CarsPhoto} alt="logo" width="65%" height="" /></center></div>
+      <footer className="footer" >
   <center>
     <p>&copy; 2023 Universidad de Antioquia | Desarrollado por: Ana María Vega Angarita y Maritza Tabarez Cárdenas | Estructura de Datos 2023-2 </p>
   </center>
 </footer>
-
     </div>
   );
 }

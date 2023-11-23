@@ -40,7 +40,7 @@ function Correlation() {
               {correlationForAll}
             </p>
           )}
-          <div><center> <img src={CorrelationPhoto} alt="logo" width="895" height="" /></center></div>
+          <div><center> <img src={CorrelationPhoto} alt="logo" width="90%" height="" /></center></div>
           {correlationForPage !== null && (
             <p><strong>Correlation First Page: </strong>{correlationForPage}</p>
           )}
