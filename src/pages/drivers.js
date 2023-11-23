@@ -60,7 +60,7 @@ function Drivers() {
       {backendData.length === 0 ? (
         <p>Loading</p>
       ) : (
-        <div className="container mt-4 shado-lg p3 mb-5 bg-body rounded"> 
+        <div className="container-fluid mt-4 shadow-lg p-3 mb-5 bg-body"> 
         <h2><center>Drivers Skills</center></h2>
         <h1><center>2023</center></h1>
         <div className="table-responsive">
