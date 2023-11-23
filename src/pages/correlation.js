@@ -44,7 +44,7 @@ function Correlation() {
           {correlationForPage !== null && (
             <p><strong>Correlation First Page: </strong>{correlationForPage}</p>
           )}
-          <div className="table-responsive">
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
