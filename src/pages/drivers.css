@@ -16,3 +16,13 @@
 
 
 
+@media (max-width: 600px) {
+    .pagination {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .page-item {
+      margin: 5px 0;
+    }
+  }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Alain from '../Imagenes/Alain Prost.jpg'
+import '../pages/drivers.css'
 function DriversStandings() {
   const [driverWithHighestWinRate, setDriverWithHighestWinRate] = useState({});
   const [driverStats, setDriverStats] = useState([]);
@@ -33,7 +34,7 @@ function DriversStandings() {
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <h2><center>Driver with highest win rate</center></h2>
-          <div className="table-responsive">
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -73,6 +74,7 @@ function DriversStandings() {
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <h2>Driver Stats</h2>
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -95,6 +97,7 @@ function DriversStandings() {
               ))}
             </tbody>
           </table>
+          </div>
           <div>
             <ul className="pagination">
               {Array.from({ length: Math.ceil(driverStats.length / itemsPerPage) }, (_, i) => (

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CorrelationPhoto from '../Imagenes/CorrelationAgeAndWins.jpg'
+import '../pages/drivers.css'
 function Correlation() {
   const [backendData, setBackendData] = useState([]);
   const [correlationForAll, setCorrelationForAll] = useState(null);
@@ -46,7 +47,7 @@ function Correlation() {
               This could be interpreted as indicating that there is no strong relationship between the ages of the drivers and the number of races won.
             </p>
           </div>
-         
+          <div><center>{" "} <img src={CorrelationPhoto} alt="logo" width="90%" height="auto" /></center></div>
           {correlationForPage !== null && (
             <p><strong>Correlation First Page: </strong>{correlationForPage}</p>
           )}
