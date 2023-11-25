@@ -108,7 +108,7 @@ function Rankings() {
           </div>
           <div class="card-body">
    
-    <p class="card-text">The rarity of fatal accidents suggests that safety measures and protocols in motorsports have been effective in preventing such tragic events.</p>
+    <p class="card-text">The query will give you the careers that have the highest number of completed outcomes. This could indicate the success of those careers in terms of completion.</p>
   </div>
           <div>
           <h2><h1 className="text"><span className="badge text-bg-danger-custom">Fatal Accidents</span></h1>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import CorrelationPhoto from '../Imagenes/CorrelationAgeAndWins.jpg'
-import '../pages/drivers.css'
 function Correlation() {
   const [backendData, setBackendData] = useState([]);
   const [correlationForAll, setCorrelationForAll] = useState(null);
@@ -29,7 +28,7 @@ function Correlation() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container-fluid mt-4 shadow-lg p-3 mb-5 bg-body">
+    <div>
       {backendData.length === 0 ? (
         <p>Loading</p>
       ) : (
