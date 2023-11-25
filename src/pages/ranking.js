@@ -106,8 +106,9 @@ function Rankings() {
               ))}
             </tbody>
           </table>
-          <div><center> <img src={CicuitsPhotoFatal} alt="logo" width="79%" height="" /></center></div>
           </div>
+          <div><center> <img src={CicuitsPhotoFatal} alt="logo" width="79%" height="" /></center></div>
+         
           <div class="card-body">
    
     <p class="card-text">The query will give you the careers that have the highest number of completed outcomes. This could indicate the success of those careers in terms of completion.</p>
@@ -169,6 +170,7 @@ function Rankings() {
           <h2>
             <center>RACES COMPLETED FINALLY</center>
           </h2>
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -187,7 +189,7 @@ function Rankings() {
               ))}
             </tbody>
           </table>
-          
+          </div>
           <div>
             <ul className="pagination">
               {Array.from({ length: Math.ceil(backendData2.length / itemsPerPage) }, (_, i) => (
