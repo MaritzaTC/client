@@ -46,10 +46,11 @@ function Rankings() {
         <p>Loading</p>
       ) : (
         <div className="container-fluid mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <div className="table-responsive-lg">
+          
           <h2>
             <center>Ranking first five</center>
           </h2>
+          <div className="table-responsive">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
@@ -82,10 +83,11 @@ function Rankings() {
         <p>Loading</p>
       ) : (
         <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-          <div className="table-responsive-lg">
+         
           <h2>
             <center>Fatal Accident</center>
           </h2>
+          <div className="table-responsive-lg">
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
