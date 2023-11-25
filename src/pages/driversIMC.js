@@ -40,7 +40,7 @@ function DriversImc() {
                     <td>{item.Name}</td>
                     <td>{item.Height}</td>
                     <td>{item.Weight}</td>
-                    <th>{item.IMC}</th>
+                    <th>{item.IMC.toFixed(2)}</th>
                   </tr>
                 ))}
               </tbody>

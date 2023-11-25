@@ -38,7 +38,7 @@ function ConstructorStandings() {
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
-               <th>Constructor Id</th>
+               <th>Id</th>
                 <th>Constructor Name</th>
                 <th>Total Wins</th>
                 <th>Total Circuits</th>
@@ -51,7 +51,7 @@ function ConstructorStandings() {
                 <td>{constructorWithHighestWinRate.constructorName}</td>
                 <td>{constructorWithHighestWinRate.totalWins}</td>
                 <td>{constructorWithHighestWinRate.totalCircuits}</td>
-                <td>{constructorWithHighestWinRate.winRate}</td>
+                <td>{constructorWithHighestWinRate.winRate.toFixed(2)}</td>
               </tr>
             </tbody>
           </table>
@@ -78,7 +78,7 @@ function ConstructorStandings() {
           <table className="table table-bordered table-striped">
             <thead>
               <tr>
-              <th>Constructor Id</th>
+              <th>Id</th>
                 <th>Constructor Name</th>
                 <th>Total Wins</th>
                 <th>Total Circuits</th>
@@ -92,7 +92,7 @@ function ConstructorStandings() {
                   <td>{driver.constructorName}</td>
                   <td>{driver.totalWins}</td>
                   <td>{driver.totalCircuits}</td>
-                  <td>{driver.winRate}</td>
+                  <td>{driver.winRate.toFixed(2)}</td>
                 </tr>
               ))}
             </tbody>

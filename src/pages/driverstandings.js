@@ -39,7 +39,7 @@ function DriversStandings() {
             <thead>
               <tr>
                <th>Driver</th>
-                <th>Driver Id</th>
+                <th>Id</th>
                 <th>Total Wins</th>
                 <th>Total Races</th>
                 <th>WinRate</th>
@@ -51,7 +51,7 @@ function DriversStandings() {
                 <td>{driverWithHighestWinRate.driverId}</td>
                 <td>{driverWithHighestWinRate.totalWins}</td>
                 <td>{driverWithHighestWinRate.totalRaces}</td>
-                <td>{driverWithHighestWinRate.winRate}</td>
+                <td>{driverWithHighestWinRate.winRate.toFixed(2)}</td>
               </tr>
             </tbody>
           </table>
@@ -79,7 +79,7 @@ function DriversStandings() {
             <thead>
               <tr>
                 <th>Driver</th>
-                <th>Driver Id</th>
+                <th>Id</th>
                 <th>Total Wins</th>
                 <th>Total Races</th>
                 <th>WinRate</th>
@@ -92,7 +92,7 @@ function DriversStandings() {
                   <td>{driver.driverId}</td>
                   <td>{driver.totalWins}</td>
                   <td>{driver.totalRaces}</td>
-                  <td>{driver.winRate}</td>
+                  <td>{driver.winRate.toFixed(2)}</td>
                 </tr>
               ))}
             </tbody>
