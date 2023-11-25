@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CorrelationPhoto from '../Imagenes/CorrelationAgeAndWins.jpg'
+import '../pages/drivers.css'
 function Correlation() {
   const [backendData, setBackendData] = useState([]);
   const [correlationForAll, setCorrelationForAll] = useState(null);
@@ -28,11 +29,11 @@ function Correlation() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className="container-fluid mt-4 shadow-lg p-3 mb-5 bg-body">
       {backendData.length === 0 ? (
         <p>Loading</p>
       ) : (
-        <div className="container-fluid mt-4 shadow-lg p-3 mb-5 bg-body">
+        <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <h1 className="text"><span className="badge text-bg-danger-custom">Correlation: Age and wins</span></h1>
           {correlationForAll !== null && (
             <p>
@@ -40,27 +41,39 @@ function Correlation() {
               {correlationForAll}
             </p>
           )}
-          <div><center> <img src={CorrelationPhoto} alt="logo" width="90%" height="" /></center></div>
+          <div class="card-body">
+
+            <p class="card-text">
+              This could be interpreted as indicating that there is no strong relationship between the ages of the drivers and the number of races won.
+            </p>
+          </div>
+          <div><center>{" "} <img src={CorrelationPhoto} alt="logo" width="90%" height="auto" /></center></div>
           {correlationForPage !== null && (
             <p><strong>Correlation First Page: </strong>{correlationForPage}</p>
           )}
+          <div class="card-body">
+            <p class="card-text">
+
+              This specifically refers to the first page of results, indicating that the weak relationship persists even when considering only a portion of the data.
+            </p>
+          </div>
           <div className="table-responsive-lg">
-          <table className="table table-bordered table-striped rounded">
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Wins</th>
-              </tr>
-            </thead>
-            <tbody>
-              {currentBackendData.map((driver) => (
-                <tr key={driver.driverId}>
-                  <td>{driver.Age}</td>
-                  <td>{driver.Wins}</td>
+            <table className="table table-bordered table-striped rounded">
+              <thead>
+                <tr>
+                  <th>Age</th>
+                  <th>Wins</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {currentBackendData.map((driver) => (
+                  <tr key={driver.driverId}>
+                    <td>{driver.Age}</td>
+                    <td>{driver.Wins}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
           <div>
             <ul className="pagination">

@@ -69,6 +69,10 @@ function Rankings() {
             </tbody>
           </table>
           <div><center> <img src={CircuitsPhoto} alt="logo" width="79%" height="" /></center></div>
+          <div class="card-body">
+    <h2 class="card-title"> The careers with the most completed results </h2>
+    <p class="card-text">The query will give you the careers that have the highest number of completed outcomes. This could indicate the success of those careers in terms of completion.</p>
+  </div>
           </div>
         </div>
       )} 
@@ -102,6 +106,10 @@ function Rankings() {
           </table>
           <div><center> <img src={CicuitsPhotoFatal} alt="logo" width="79%" height="" /></center></div>
           </div>
+          <div class="card-body">
+   
+    <p class="card-text">The rarity of fatal accidents suggests that safety measures and protocols in motorsports have been effective in preventing such tragic events.</p>
+  </div>
           <div>
           <h2><h1 className="text"><span className="badge text-bg-danger-custom">Fatal Accidents</span></h1>
             <h2>Race 474</h2>
@@ -116,6 +124,9 @@ function Rankings() {
             title="Fatal Accident Video"
           ></iframe>
         </div>
+        <div class="card">
+
+</div>
         <div>
       <h2>
             <h2>Race 604</h2>
