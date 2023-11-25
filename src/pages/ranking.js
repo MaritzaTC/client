@@ -45,7 +45,7 @@ function Rankings() {
         {(backendData1.length === 0 && currentbackendData2.length === 0 && backendData3.length === 0 ) ? (
         <p>Loading</p>
       ) : (
-        <div className="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+        <div className="container-fluid mt-4 shadow-lg p-3 mb-5 bg-body rounded">
           <div className="table-responsive-lg">
           <h2>
             <center>Ranking first five</center>
