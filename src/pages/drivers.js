@@ -83,6 +83,10 @@ function Drivers() {
             <tbody id="tbody"></tbody>
           </table> 
           </div>
+          <div class="card-body">
+   
+   <p class="card-text">PTC=PassageThroughCurves BRA=Braking REA=Reaction CTR=Control TOU=Touch ADP=Adaptability OVER=Overtaking DEF=Defending ACC=Accuracy GEN=General</p>
+ </div>
           <div><center> <img src={DriversPhoto} alt="logo" width="90%" height="" /></center></div>
         </div>
       )}
